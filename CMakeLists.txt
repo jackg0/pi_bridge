@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(bridge_practice)
+project(pi_bridge)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -55,7 +55,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
  add_service_files(
    FILES
-   AddTwoInts.srv
+   PiBridge.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -150,7 +150,7 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
  install(PROGRAMS
-   scripts/add_two_ints_server.py
+   scripts/pi_bridge.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts
  )
 
